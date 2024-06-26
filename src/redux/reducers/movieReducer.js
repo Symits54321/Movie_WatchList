@@ -60,7 +60,7 @@ const initialState={
 
 
 const movieSlice = createSlice({
-    title:'movies',
+    name:'movies',
     initialState:initialState,
     reducers:{
 
@@ -102,9 +102,7 @@ const movieSlice = createSlice({
 
         deleteMovie:(state,action) => {
             let deleteId = action.payload
-            let movies = state.movies
-            movies = movies.filter(x=>x.id!= deleteId)
-            state.movies= movies;
+            state.movies = state.movies.filter(movie => movie.id !== deleteId);
         },
     
         

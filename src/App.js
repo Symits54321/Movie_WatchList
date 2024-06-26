@@ -3,8 +3,10 @@ import './App.css';
 import {Provider} from "react-redux";
 import {store} from "./store";
 
-import Chatpage from './pages/chatpage/Chatpage';
-import Loginpage from './pages/loginpage/Loginpage';
+
+import Homepage from './pages/homepage/homepage';
+import AddEditPage from './pages/add_edit_page/AddEditPage';
+import DetailPage from './pages/detailpage/detailpage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -18,8 +20,10 @@ function App() {
     path:'/',
     element:<Root/>,
     children:[
-      {path:"login", element:<Loginpage/>,},
-      {path:"chatpage", element:<Chatpage/>,},
+      { index: true, element: <Homepage /> }, // Default route
+      {path:"homepage", element:<Homepage/>,},
+      {path:"add_edit_page", element:<AddEditPage/>,},
+      {path:"detailpage", element:<DetailPage/>,},
     ],
   },]);
 
@@ -41,7 +45,7 @@ function App() {
 function Root() {
   return (
     <div>
-      <h1 style={{margin:"30px 10px"}}>Welcome to the Chat App</h1>
+      <h1 style={{margin:"30px 10px"}}>MoviesApp</h1>
       <Outlet />
     </div>
   );
