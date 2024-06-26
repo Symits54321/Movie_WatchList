@@ -11,6 +11,7 @@ import DetailPage from './pages/detailpage/detailpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 
 function App() {
    
@@ -45,7 +46,10 @@ function App() {
 function Root() {
   return (
     <div>
-      <h1 style={{margin:"30px 10px"}}>MoviesApp</h1>
+      <h1 style={{margin:"30px 10px"}}>Movie WatchList</h1>
+      <Link to={`/homepage`} >Homepage</Link>
+      <Link to={`/add_edit_page`} >Add</Link>
+      <Link to={`/detailpage`} >Details</Link>
       <Outlet />
     </div>
   );
