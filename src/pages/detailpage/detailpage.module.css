@@ -1,0 +1,30 @@
+.detailPage{
+    padding: 20px 30px;
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1,p,h2{
+    color:white; 
+}
+
+.imageDetail{
+    width:40vw;
+    height:auto;
+}
+
+.imageDetail>img{
+    width:80%;
+    height: auto;
+    max-height: auto;
+}
+
+.movieDetail{
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+}

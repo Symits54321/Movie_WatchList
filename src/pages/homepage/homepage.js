@@ -15,7 +15,7 @@ function Homepage() {
 
   return (
     <div className={style.homepage}>
-       <h1>Welcome to HomePage</h1>
+       {/* <h1>Welcome to HomePage</h1> */}
         <Movies/>
     </div>
   );

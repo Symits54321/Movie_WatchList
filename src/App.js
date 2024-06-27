@@ -24,7 +24,7 @@ function App() {
       { index: true, element: <Homepage /> }, // Default route
       {path:"homepage", element:<Homepage/>,},
       {path:"add_edit_page", element:<AddEditPage/>,},
-      {path:"detailpage", element:<DetailPage/>,},
+      {path:"detailpage/:id", element:<DetailPage/>,},
     ],
   },]);
 
