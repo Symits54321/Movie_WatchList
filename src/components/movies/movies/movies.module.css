@@ -8,3 +8,12 @@
     border:1px solid red;
     background-color:#431018;
 }
+
+@media screen and (max-width:670px){
+    .movies{
+    grid-template-columns: repeat(auto-fill, minmax(50px, 80px));
+   
+    }
+
+    
+}

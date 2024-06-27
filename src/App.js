@@ -9,9 +9,9 @@ import AddEditPage from './pages/add_edit_page/AddEditPage';
 import DetailPage from './pages/detailpage/detailpage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet,NavLink } from "react-router-dom";
 
-import { Link } from "react-router-dom";
+
 
 function App() {
    
@@ -19,7 +19,7 @@ function App() {
   const browserRouter = createBrowserRouter([{
 
     path:'/',
-    element:<Root/>,
+    element:<Navbar/>,
     children:[
       { index: true, element: <Homepage /> }, // Default route
       {path:"homepage", element:<Homepage/>,},
@@ -43,16 +43,41 @@ function App() {
 }
 
 
-function Root() {
+function Navbar() {
   return (
-    <div>
+    <div className='Navbar'>
       <h1 style={{margin:"30px 10px"}}>Movie WatchList</h1>
-      <Link to={`/homepage`} >Homepage</Link>
-      <Link to={`/add_edit_page`} >Add</Link>
-      <Link to={`/detailpage`} >Details</Link>
-      <Outlet />
+
+     <div className='navbtns'>
+      <NavLink
+        to="/homepage"
+        className={({ isActive, isPending }) =>
+          isPending ? "pendingLink" : isActive ? "activated nav" : "notActived nav"
+        }
+      >
+        Homepage
+      </NavLink>
+      <NavLink
+        to="/add_edit_page"
+        className={({ isActive, isPending }) =>
+          isPending ? "pendingLink" : isActive ? "activated nav" : "notActived nav"
+        }
+      >
+       Add
+     </NavLink>
+     </div>
+    
+      {/* <Link to={`/detailpage`} >Details</Link>}} */}
+      <Outlet /> 
     </div>
   );
 }
+
+
+
+
+
+
+
 
 export default App;

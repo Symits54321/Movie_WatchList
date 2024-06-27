@@ -1,0 +1,28 @@
+
+.AddEditPage{
+    background-color: black;
+    color: white;
+    padding:10px 30px;
+}
+
+.form{
+   
+    text-align: left;
+
+}
+
+.form>div{
+    display:flex;
+}
+
+.form>div>label{
+    width: 120px;
+}
+
+.review{
+    flex-direction: column;
+}
+
+.addreviewbtn{
+    width:150px;
+}

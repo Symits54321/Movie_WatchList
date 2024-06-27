@@ -192,11 +192,14 @@ const initialState={
     genre:'',
     watchedStatus:false,
     rating:0,
-    review:'',
+    review:[],
+    currReviewerName:'',
+    currReview:'',
     imageUrl:'',
 
   
-    
+    //edit
+    editStatus:false,
     // for detail page 
     currentId:"",
   
@@ -242,16 +245,48 @@ const movieSlice = createSlice({
            console.log("ERROR :___ "+action.payload);
         },
 
-        setFormData:(state, action)=>{
-            state.title = action.payload.title;
-            state.description = action.payload.description;
-            state.releaseYear = action.payload.releaseYear;
-            state.genre = action.payload.genre;
-            state.rating = action.payload.rating;
-            state.review = action.payload.review;
-            state.imageUrl = action.payload.imageUrl;
-            console.log("set_form_data : - "+action.payload);
-        },
+
+
+
+        // setting form data 
+
+          setTitle: (state, action) => {
+            state.title = action.payload;
+          },
+          setDescription: (state, action) => {
+            state.description = action.payload;
+          },
+          setReleaseYear: (state, action) => {
+            state.releaseYear = action.payload;
+          },
+          setGenre: (state, action) => {
+            state.genre = action.payload;
+          },
+          setRating: (state, action) => {
+            state.rating = action.payload;
+          },
+          setReview: (state, action) => {
+            state.review = action.payload;
+          },
+          setReviewer:(state,action) => {
+             state.currReviewerName=action.payload;
+          },
+          setReviewContent:(state,action) => {
+             state.currReview=action.payload;
+          },
+          setImageUrl: (state, action) => {
+            state.imageUrl = action.payload;
+          },
+          setWatchedStatus: (state, action) => {
+            state.watchedStatus = action.payload;
+          },
+          setEditStatus: (state, action) => {
+            state.editStatus = action.payload;
+          },
+          
+
+
+
 
         addMovie:(state, action) => {
 
@@ -275,7 +310,20 @@ const movieSlice = createSlice({
             state.popupState = !state.popupState;
         },
 
-      
+        refreshForm:(state)=>{
+            state.id='';
+            state.title='';
+            state.description='';
+            state.releaseYear='';
+            state.genre='';
+            state.watchedStatus=false;
+            state.rating=0;
+            state.review=[];
+            state.currReviewerName='';
+            state.currReview='';
+            state.imageUrl='';
+            state.editStatus=false;
+        }
          
 
     }

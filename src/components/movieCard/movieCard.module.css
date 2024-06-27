@@ -42,3 +42,16 @@
     padding: 0;
     margin:0;
 }
+
+
+@media screen and (max-width:670px){
+    .MovieCard{
+        min-width:50px;
+    }
+    .title{
+        font-size: 0.7rem;
+        color: white;
+        padding: 0;
+        margin:0;
+    }
+}
