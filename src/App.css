@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .Navbar{
-  background-color: blue;
+  background-color: #121212;
+  min-height: 20vh;
 }
 
 .navbtns{

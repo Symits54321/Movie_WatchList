@@ -46,8 +46,14 @@ function App() {
 function Navbar() {
   return (
     <div className='Navbar'>
-      <h1 style={{margin:"30px 10px"}}>Movie WatchList</h1>
+      {/* <h1>Movie WatchList</h1> */}
+      {/* heading */}
+        <div className='headingLogo'>
 
+          <img src='images/heading.JPG' />
+
+        </div>
+      {/* Navbtns  */}
      <div className='navbtns'>
       <NavLink
         to="/homepage"

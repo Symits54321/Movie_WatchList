@@ -22,6 +22,18 @@ function MovieCard({name,imageUrl}) {
         {/* //name */}
            <p className={style.title}>{name}</p>
 
+           {/* watched status  */}
+
+           {/* <div> */}
+          
+          {/* <label>watchedStatus</label>
+         
+
+          <button onClick={()=> dispatch(movieActions.setWatchedStatus(!watchedStatus))}>{watchedStatus ? 'Watched' : 'Not Watched'}</button>
+       
+        </div> */}
+
+
     </div>
   );
 }

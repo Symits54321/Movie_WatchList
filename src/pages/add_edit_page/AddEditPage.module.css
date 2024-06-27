@@ -1,22 +1,39 @@
 
 .AddEditPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: black;
     color: white;
     padding:10px 30px;
+    min-height: 80vh;
 }
 
 .form{
    
     text-align: left;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .form>div{
     display:flex;
+    margin: 10px;
 }
 
 .form>div>label{
-    width: 120px;
+    width: 30vw;
+}
+
+.form>div>input,textarea {
+    width: 60vw;
+
+}
+
+.formbtns{
+    display:flex;
+    flex-direction: row-reverse;
 }
 
 .review{
