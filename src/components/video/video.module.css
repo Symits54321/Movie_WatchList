@@ -1,0 +1,16 @@
+
+.videoContainer{
+    width:60vw;
+    height:auto;
+}
+
+@media screen and (max-width:950px){
+
+    .videoContainer{
+        width:100%;
+        height:auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

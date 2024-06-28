@@ -1,13 +1,22 @@
+
+
 import { useDispatch, useSelector } from 'react-redux';
 import { movieActions,movieSelector } from '../../redux/reducers/movieReducer';
+import React, { useRef, useEffect, useState } from 'react';
+
 
 import YouTube from 'react-youtube';
+import style from "./video.module.css";
 
-function VideoComp () {
+
+ function VideoComp () {
 
     let {currMovieData} = useSelector(movieSelector) ;
 
     let {title,videoUrl}=currMovieData;
+
+    const playerRef = useRef(null);
+    const [playerWidth, setPlayerWidth] = useState('640px'); // Initial width or adjust as needed
     
 
     // Youtube 
@@ -28,13 +37,20 @@ function VideoComp () {
 
     const videoId = getYouTubeVideoIdSubstring(videoUrl);
 
+   
+
+  
+   
+   
+
+
     const opts = {
-        height: '390',
-        width: '640',
+        width: '100%', // Set width dynamically
+        
         playerVars: {
-            autoplay: 1,
+          autoplay: 1,
         },
-    };
+      };
 
 
 
@@ -42,7 +58,7 @@ function VideoComp () {
 
     return(
 
-        <div>
+        <div ref={playerRef} className={style.videoContainer}>
         {videoId!="" ? (
             <YouTube videoId={videoId} opts={opts} />
         ) : (

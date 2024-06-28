@@ -3,7 +3,7 @@
     text-decoration: none; /* Remove underline */
     
     height:auto;
-    max-height:60vw;
+    /* max-height:60vw; */
     display: grid;
     grid-auto-columns: 1fr;
     background-color: #141414;

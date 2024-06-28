@@ -12,7 +12,7 @@ h1,p,h2{
 }
 
 .imageDetail{
-    width:40vw;
+    width:30vw;
     height:auto;
 }
 
@@ -23,8 +23,28 @@ h1,p,h2{
 }
 
 .movieDetail{
-    width:50vw;
+    width:60vw;
     display: flex;
     flex-direction: column;
     text-align:left;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:950px){
+
+    .detailPage{
+        flex-direction: column;
+    }
+
+    .imageDetail,.movieDetail{
+        width:90vw;
+    }
+
+    .imageDetail>img{
+        width:auto;
+        height: auto;
+        max-height: 30vh;
+    }
+
+
 }
