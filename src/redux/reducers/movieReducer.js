@@ -246,9 +246,17 @@ const movieSlice = createSlice({
         },
 
 
+        // sett movie data 
+
+        setMovies: (state, action) => {
+          state.movies = action.payload;
+        },
+
+
 
 
         // setting form data 
+
 
           setTitle: (state, action) => {
             state.title = action.payload;

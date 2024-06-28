@@ -1,7 +1,9 @@
 
 
 import style from './homepage.module.css';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 
 import { movieReducer,movieActions,movieSelector } from '../../redux/reducers/movieReducer';
 
@@ -9,9 +11,14 @@ import Movies from '../../components/movies/movies/movies';
 
 function Homepage() {
 
-    const dispatch = useDispatch();
+   
 
     // const {movies} = useSelector(movieSelector);
+
+
+   
+
+
 
   return (
     <div className={style.homepage}>

@@ -1,19 +1,62 @@
 import logo from './logo.svg';
 import './App.css';
-import {Provider} from "react-redux";
-import {store} from "./store";
 
+
+import { useEffect,useState } from 'react';
 
 import Homepage from './pages/homepage/homepage';
 import AddEditPage from './pages/add_edit_page/AddEditPage';
 import DetailPage from './pages/detailpage/detailpage';
 
+import data from "./movieData.json";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider, Outlet,NavLink } from "react-router-dom";
+
+import { useDispatch, useSelector } from 'react-redux';
+import { movieReducer,movieActions,movieSelector } from './redux/reducers/movieReducer';
 
 
 
 function App() {
+
+  const dispatch = useDispatch();
+    
+  // const [Data,setData] = useState([""]);
+
+  // const[]=useSelector(movieSelector);
+   
+
+
+
+  useEffect(()=>{
+
+    fetchApi();
+
+        async function fetchApi(){
+
+            try {
+
+              // let fetchResponse = await fetch("./movieData.json");
+              // let fetchedJson = await fetchResponse;
+                let fetchedJson = data;
+              // setData(fetchedJson);
+              console.log("Got fetched data from movieData.json");
+
+              dispatch(movieActions.setMovies(fetchedJson));
+              console.log(fetchedJson);
+              
+            } catch (error) {
+              
+              console.log(error);
+            }
+      
+          
+        }
+
+
+  },[]);
+
    
 
   const browserRouter = createBrowserRouter([{
@@ -33,12 +76,12 @@ function App() {
 
 
   return (
-    <Provider store={store}>
+ 
       <div className="App">
         {/* it is the main page for all chat execution  */}
         <RouterProvider  router={browserRouter} />
       </div>
-    </Provider>
+    
   );
 }
 

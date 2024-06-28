@@ -1,0 +1,168 @@
+[
+    {
+        "id":"1",
+        "title":"Avengers: The Infinity war",
+        "description":"Having acquired the Power Stone–one of six Infinity Stones–from the planet Xandar, Thanos and his lieutenants—Ebony Maw, Cull Obsidian, Proxima Midnight, and Corvus Glaive—intercept the spaceship carrying the survivors of Asgard's destruction.[a] After subduing Thor, Thanos extracts the Space Stone from the Tesseract, overpowers the Hulk, and kills Loki. Thanos also kills Heimdall after he sends Hulk to Earth using the Bifröst. Thanos and his lieutenants leave, destroying the ship.",
+        "releaseYear":"2014",
+        "genre":"Action",
+        "watchedStatus":false,
+        "rating":4,
+        "review":[{"name":"Sumit","comment":"What a film it is!!"},{"name":"Steve","comment":"Fantastic film"}],
+        "imageUrl":"https://i.pinimg.com/564x/42/00/da/4200dae9ac7b15a5c65375cbfaceaa69.jpg"
+    },
+
+    {
+        "id":"2",
+        "title":"Alice in Borderland ",
+        "description":"Obsessed gamer Arisu suddenly finds himself in a strange, emptied-out version of Tokyo in which he and his friends must compete in dangerous games in order to survive.",
+        "releaseYear":"2020",
+        "genre":"Action",
+        "watchedStatus":false,
+        "rating":4,
+        "review":[{"name":"Sumit","comment":"very nice film"},{"name":"Steve","comment":"nice action film"}],
+        "imageUrl":"https://i.pinimg.com/564x/a3/bb/b1/a3bbb19fdffd2343159cacdb98c198e3.jpg"
+    },
+
+    {
+        "id": "3",
+        "title": "Inception",
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "releaseYear": "2010",
+        "genre": "Sci-Fi",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "John", "comment": "Mind-blowing!" },
+          { "name": "Jane", "comment": "A cinematic masterpiece" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/96/07/dd/9607ddb58b5a327d7463833da63ce6fd.jpg"
+      },
+      {
+        "id": "4",
+        "title": "The Matrix",
+        "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+        "releaseYear": "1999",
+        "genre": "Sci-Fi",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Alice", "comment": "A true classic" },
+          { "name": "Bob", "comment": "Revolutionary effects" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/ed/45/16/ed4516338fa5df348c13a2a7ce1e7998.jpg"
+      },
+      {
+        "id": "5",
+        "title": "Parasite",
+        "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+        "releaseYear": "2019",
+        "genre": "Thriller",
+        "watchedStatus": false,
+        "rating": 5,
+        "review": [
+          { "name": "Charlie", "comment": "Intense and gripping" },
+          { "name": "Dave", "comment": "A modern masterpiece" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/e6/de/03/e6de035cd3307b513e9bfe88a1457826.jpg"
+      },
+      {
+        "id": "6",
+        "title": "Interstellar",
+        "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "releaseYear": "2014",
+        "genre": "Sci-Fi",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Eve", "comment": "Visually stunning" },
+          { "name": "Frank", "comment": "Emotionally profound" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/0b/34/ce/0b34ce2145b475247577a5d438a199b0.jpg"
+      },
+      {
+        "id": "7",
+        "title": "The Dark Knight",
+        "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+        "releaseYear": "2008",
+        "genre": "Action",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Grace", "comment": "Heath Ledger was phenomenal" },
+          { "name": "Hank", "comment": "Best superhero movie ever" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/ea/a2/6e/eaa26e2c3bfa234c3cdd3c4d9fabad35.jpg"
+      },
+      {
+        "id": "8",
+        "title": "Fight Club",
+        "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much, much more.",
+        "releaseYear": "1999",
+        "genre": "Drama",
+        "watchedStatus": false,
+        "rating": 4,
+        "review": [
+          { "name": "Ivy", "comment": "A cult classic" },
+          { "name": "Jack", "comment": "Thought-provoking" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/72/4d/96/724d96f332b01b4ac7cd9b50873454a0.jpg"
+      },
+      {
+        "id": "9",
+        "title": "Pulp Fiction",
+        "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        "releaseYear": "1994",
+        "genre": "Crime",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Ken", "comment": "Quentin Tarantino at his best" },
+          { "name": "Linda", "comment": "A masterpiece of storytelling" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/e4/05/0b/e4050b92335cde4a3b5ae340fc8c5ee3.jpg"
+      },
+      {
+        "id": "10",
+        "title": "The Shawshank Redemption",
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "releaseYear": "1994",
+        "genre": "Drama",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Mike", "comment": "An all-time great" },
+          { "name": "Nina", "comment": "Incredibly moving" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/08/6f/fe/086ffeccab22baa2b4d49ab8787f9b90.jpg"
+      },
+      {
+        "id": "11",
+        "title": "The Godfather",
+        "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "releaseYear": "1972",
+        "genre": "Crime",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Oscar", "comment": "A timeless classic" },
+          { "name": "Pat", "comment": "Unparalleled storytelling" }
+        ],
+        "imageUrl": "https://i.pinimg.com/736x/a4/73/86/a473863d343408810469f0f9af50fa41.jpg"
+      },
+      {
+        "id": "12",
+        "title": "The Lord of the Rings: The Return of the King",
+        "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+        "releaseYear": "2003",
+        "genre": "Fantasy",
+        "watchedStatus": true,
+        "rating": 5,
+        "review": [
+          { "name": "Quincy", "comment": "Epic conclusion to the trilogy" },
+          { "name": "Rachel", "comment": "Visually and emotionally stunning" }
+        ],
+        "imageUrl": "https://i.pinimg.com/564x/5a/42/e8/5a42e8f756883f440c6594930078a4ba.jpg"
+      
+    }
+
+]
