@@ -7,26 +7,33 @@ import { movieActions,movieSelector } from '../../redux/reducers/movieReducer';
 
 import { useParams } from 'react-router-dom';
 
+import VideoComp from '../../components/video/video';
+
+
+
+
 function DetailPage() {
    
    let {id} = useParams();
 
-   const [movieData,setmovieData] = useState([""]);
+   let dispatch = useDispatch();
+
+
 
    //get the movie data from id
 
    
 
-   let {movies} = useSelector(movieSelector);
+   let {movies,currMovieData} = useSelector(movieSelector);
 
     useEffect(()=>{
           let movie = movies.filter(x=>x.id==id);
-          setmovieData(movie[0]);
-          console.log(movie[0]);
+          dispatch(movieActions.setCurrMovie(movie[0]));
+          console.log(currMovieData);
     },[]);
 
 
-    let {title,description,imageUrl,genre,rating,releaseYear} = movieData;
+    let {title,description,imageUrl,genre,rating,releaseYear,videoUrl} = currMovieData;
 
 
   return (
@@ -38,6 +45,8 @@ function DetailPage() {
          </div>
        {/* moviedetails  */}
        <div className={style.movieDetail}>
+            {/* Video  */}
+            <VideoComp />
             {/* Title */}
             <h2 className={style.title}>{title}</h2>
             {/* Description */}

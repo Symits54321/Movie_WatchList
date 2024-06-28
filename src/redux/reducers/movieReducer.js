@@ -212,7 +212,10 @@ const initialState={
 
     email:"",
 
-    password:""
+    password:"",
+
+    // current values 
+    currMovieData:{}
 }
 
 
@@ -250,6 +253,10 @@ const movieSlice = createSlice({
 
         setMovies: (state, action) => {
           state.movies = action.payload;
+        },
+
+        setCurrMovie: (state, action) => {
+          state.currMovieData = action.payload;
         },
 
 
