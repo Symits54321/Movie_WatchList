@@ -45,7 +45,7 @@ import style from "./video.module.css";
 
 
     const opts = {
-        width: '100%', // Set width dynamically
+        width: '90%', // Set width dynamically
         
         playerVars: {
           autoplay: 1,

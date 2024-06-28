@@ -34,6 +34,9 @@ h1,p,h2{
 
     .detailPage{
         flex-direction: column;
+        padding: 7px;
+        align-items: center;
+        justify-content: center;
     }
 
     .imageDetail,.movieDetail{
