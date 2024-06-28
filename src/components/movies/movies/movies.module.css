@@ -11,7 +11,18 @@
 
 @media screen and (max-width:670px){
     .movies{
-    grid-template-columns: repeat(auto-fill, minmax(50px, 120px));
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:5px 5px;
+    padding:6px;
+   
+    }
+
+    
+}
+
+@media screen and (max-width:400px){
+    .movies{
+    grid-template-columns: 1fr 1fr ;
     gap:5px 5px;
     padding:6px;
    
