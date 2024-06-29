@@ -16,6 +16,9 @@ import { createBrowserRouter, RouterProvider, Outlet,NavLink } from "react-route
 import { useDispatch, useSelector } from 'react-redux';
 import { movieReducer,movieActions,movieSelector } from './redux/reducers/movieReducer';
 
+import Navbar from './components/navbar/navbar';
+
+
 
 
 function App() {
@@ -28,10 +31,12 @@ function App() {
    
 
 
+//---------------------------------Fetching Movies :- in 1st load------------------------------------------------------
+
 
   useEffect(()=>{
 
-    fetchApi();
+ 
 
         async function fetchApi(){
 
@@ -55,9 +60,15 @@ function App() {
         }
 
 
+        fetchApi();
+
+
   },[]);
 
+
+
    
+  // ------------------------------------------- ROUTER   -----------------------------------------------------
 
   const browserRouter = createBrowserRouter([{
 
@@ -78,6 +89,12 @@ function App() {
   return (
  
       <div className="App">
+        {/* Heading  */}
+        <div className="headingLogo">
+  
+            <img src='images/heading.JPG' />
+  
+          </div>
         {/* it is the main page for all chat execution  */}
         <RouterProvider  router={browserRouter} />
       </div>
@@ -86,41 +103,7 @@ function App() {
 }
 
 
-function Navbar() {
-  return (
-    <div className='Navbar'>
-      {/* <h1>Movie WatchList</h1> */}
-      {/* heading */}
-        <div className='headingLogo'>
 
-          <img src='images/heading.JPG' />
-
-        </div>
-      {/* Navbtns  */}
-     <div className='navbtns'>
-      <NavLink
-        to="/homepage"
-        className={({ isActive, isPending }) =>
-          isPending ? "pendingLink" : isActive ? "activated nav" : "notActived nav"
-        }
-      >
-        Homepage
-      </NavLink>
-      <NavLink
-        to="/add_edit_page"
-        className={({ isActive, isPending }) =>
-          isPending ? "pendingLink" : isActive ? "activated nav" : "notActived nav"
-        }
-      >
-       Add
-     </NavLink>
-     </div>
-    
-      {/* <Link to={`/detailpage`} >Details</Link>}} */}
-      <Outlet /> 
-    </div>
-  );
-}
 
 
 

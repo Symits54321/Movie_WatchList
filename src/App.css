@@ -1,35 +1,9 @@
 .App {
   text-align: center;
   min-height: 100vh;
+  width:100%;
 }
 
-.Navbar{
-  background-color: #121212;
-  min-height: 100vh;
-}
-
-.navbtns{
-  display:flex;
-  flex-direction: row;
-}
-
-.nav{
-  padding:10px !important;
-  text-decoration: none;
-  text-align: center;
-  margin: 10px;
-}
-
-.notActived {
-  font-weight: bold; 
-  color: rgb(255, 204, 0); 
-}
-
-.activated {
-  font-weight: bold; 
-  color: rgb(255, 204, 0); 
-  border: 1px solid lightgoldenrodyellow;
-}
 
 
 @media screen and (max-width:670px){
