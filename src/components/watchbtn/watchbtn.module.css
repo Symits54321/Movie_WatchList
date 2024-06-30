@@ -1,0 +1,16 @@
+.watchbtn{
+    padding: 1px 5px;
+    width: 80px;
+    font-size: 0.7rem;
+    color: white;
+    border-radius: 2px;
+}
+
+.watched{
+    background-color: rgb(3, 88, 3);
+}
+
+.unwatched{
+    background-color: rgb(49, 54, 49);
+    
+}

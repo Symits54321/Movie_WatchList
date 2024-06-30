@@ -325,6 +325,35 @@ const movieSlice = createSlice({
             state.popupState = !state.popupState;
         },
 
+        toggleWatchedState :(state,action) => {
+          let id = action.payload;
+          // togggle the watched status
+          let movies = state.movies;
+
+          movies.forEach(x => {
+            if(x.id == id){
+              x.watchedStatus = ! x.watchedStatus;
+            }
+            });
+
+
+         },
+
+
+         setWatchedStateTrue :(state,action) => {
+          let id = action.payload;
+          // set true the watched status
+          let movies = state.movies;
+
+          movies.forEach(x => {
+            if(x.id == id){
+              x.watchedStatus = true;
+            }
+            });
+
+
+         },
+
         refreshForm:(state)=>{
             state.id='';
             state.title='';
