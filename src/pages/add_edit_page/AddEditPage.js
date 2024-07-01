@@ -15,7 +15,7 @@ function AddEditPage() {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const {id,title,description,releaseYear,genre,watchedStatus,rating,review,imageUrl,
+  const {id,title,description,releaseYear,genre,watchedStatus,rating,review,imageUrl,videoUrl,
     currReviewerName,currReview,editStatus
   } = useSelector(movieSelector);
 
@@ -41,7 +41,8 @@ function AddEditPage() {
         watchedStatus: watchedStatus,
         rating: rating,
         review:review,
-        imageUrl: imageUrl
+        imageUrl: imageUrl,
+        videoUrl: videoUrl,
     }))
 
     navigate(-1);
@@ -119,6 +120,16 @@ function AddEditPage() {
                 type="text"
                 value={imageUrl}
                 onChange={(e) => dispatch(movieActions.setImageUrl(e.target.value))}
+              />
+         
+           </div>
+
+           <div>
+              <label>Youtube video URL</label>
+              <input
+                type="text"
+                value={videoUrl}
+                onChange={(e) => dispatch(movieActions.setVideoUrl(e.target.value))}
               />
          
            </div>
