@@ -9,7 +9,7 @@ import { movieActions } from '../../redux/reducers/movieReducer';
 
 // import { movieReducer,movieActions,movieSelector } from '../../redux/reducers/movieReducer';
 
-function MovieCard({name,imageUrl,id,watched}) {
+function MovieCard({movie,name,imageUrl,id,watched}) {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -31,10 +31,23 @@ function MovieCard({name,imageUrl,id,watched}) {
         let targetClassname = e.target.parentElement.className;
 
 
-        // first check of btn click event 
+        // first check of btn click event occurrence
 
         if (targetClassname.match(/movieCard_btns__/) ) {
             console.log(e.target.className);
+            // for watchlist olgorithm alreay given in watchlist component
+            // for edit btn
+            if(e.target.className.match(/movieCard_editbtn__/)){
+                 
+                dispatch(movieActions.setEditStatus(true));         // setting ststus 
+                dispatch(movieActions.setEditForm(movie));         // filling form 
+                    
+                  navigate(`/add_edit_page`);       // redirecting
+
+            }
+             
+              
+
           }
 
          // to open movie  :- (redirecting to detail page)
@@ -65,6 +78,7 @@ function MovieCard({name,imageUrl,id,watched}) {
            {/* watched status  */}
             <div className={style.btns}>
               <WatchedBtn id={id} watched={watched}/>
+              <button  className={style.editbtn}>Edit</button>
             </div>
           
 

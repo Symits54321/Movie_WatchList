@@ -23,7 +23,7 @@ function Movies() {
 
             return(
                 
-                <MovieCard key={movie.id} id={movie.id} name={movie.title} imageUrl={movie.imageUrl} watched={movie.watchedStatus}/>
+                <MovieCard key={movie.id} id={movie.id} movie={movie}name={movie.title} imageUrl={movie.imageUrl} watched={movie.watchedStatus}/>
                 
             );
             

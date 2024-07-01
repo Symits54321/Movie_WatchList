@@ -138,17 +138,56 @@ const movieSlice = createSlice({
           
 
 
+     
 
+    // Feature functions 
+        setEditStatus:(state,action) => {
+              state.editStatus = action.payload;
+        },
 
         addMovie:(state, action) => {
 
             state.movies.push(action.payload);
         },
 
+        editMovie:(state, action) => {
+
+              //id
+              let id = action.payload.id;
+
+             // find location moviedata
+             let index = state.movies.findIndex((mov) => mov.id === id);
+
+              // movie object
+
+              let editedObj = {
+                "id": state.id,
+                "title": state.title,
+                "description": state.description,
+                "releaseYear": state.releaseYear,
+                "genre": state.genre,
+                "watchedStatus": state.watchedStatus,
+                "rating": state.rating,
+                "review": state.review,
+                "imageUrl": state.imageUrl, 
+                "videoUrl": state.videoUrl
+              } 
+                
+              //edit that movie location
+
+              state.movies[index] = editedObj;
+              
+            
+        },
+
+
         deleteMovie:(state,action) => {
             let deleteId = action.payload
-            state.movies = state.movies.filter(movie => movie.id !== deleteId);
+            let Updatedmovies = state.movies.filter(movie => movie.id !== deleteId);
+            state.movies=Updatedmovies;
         },
+
+       
     
         
         setSearchInput:(state,action)=>{
@@ -205,7 +244,20 @@ const movieSlice = createSlice({
             state.imageUrl='';
             state.editStatus=false;
             state.videoUrl='';
-        }
+        },
+
+        setEditForm:(state,action)=>{
+          state.id=action.payload.id;
+          state.title=action.payload.title;
+          state.description=action.payload.description;
+          state.releaseYear=action.payload.releaseYear;
+          state.rating=action.payload.rating;
+          state.review=action.payload.review;
+          state.genre=action.payload.genre;
+          state.watchedStatus=false;       
+          state.imageUrl=action.payload.imageUrl;
+          state.videoUrl=action.payload.videoUrl;
+      }
          
 
     }

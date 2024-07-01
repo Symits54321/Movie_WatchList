@@ -29,23 +29,38 @@ function AddEditPage() {
  
 
   const handleSubmit = () =>{
-      
+    
+    if(!editStatus){
+
+      dispatch(movieActions.refreshForm());
+
        const randomId = generateRandomId();
 
-      dispatch(movieActions.addMovie({
-        id: randomId,
-        title: title,
-        description: description,
-        releaseYear: releaseYear,
-        genre: genre,
-        watchedStatus: watchedStatus,
-        rating: rating,
-        review:review,
-        imageUrl: imageUrl,
-        videoUrl: videoUrl,
-    }))
+          dispatch(movieActions.addMovie({
+            id: randomId,
+            title: title,
+            description: description,
+            releaseYear: releaseYear,
+            genre: genre,
+            watchedStatus: watchedStatus,
+            rating: rating,
+            review:review,
+            imageUrl: imageUrl,
+            videoUrl: videoUrl,
+
+            
+        }))
+
+     }else{
+
+          dispatch(movieActions.editMovie({id:id}));
+          dispatch(movieActions.setEditStatus(false));
+        
+     }
 
     navigate(-1);
+
+    dispatch(movieActions.refreshForm());
 
   }
 
