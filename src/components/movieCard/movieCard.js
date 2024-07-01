@@ -18,22 +18,27 @@ function MovieCard({name,imageUrl,id,watched}) {
 
 
 
-
+    // ---------------------------- Click Event handler--------- // 
 
     const handlePosterClick=(e)=>{
 
-        console.log("parent:- " +e.target.parentElement.className);
+        console.log(e.target.parentElement.classList);
         console.log("child:- " +e.target.className);
         console.log(e.target.parentElement.id);
 
         let id = e.target.parentElement.id;
 
-          if((e.target.parentElement.className === 'movieCard_btns__aaVHl')  ){
+        let targetClassname = e.target.parentElement.className;
+
+
+        // first check of btn click event 
+
+        if (targetClassname.match(/movieCard_btns__/) ) {
             console.log(e.target.className);
           }
 
          // to open movie  :- (redirecting to detail page)
-         else if((e.target.parentElement.className ===  'movieCard_poster__JwnuU')  ){
+         else if(targetClassname.match(/movieCard_poster__/) ||  targetClassname.match(/movieCard_MovieCard__/) || e.target.className.match(/movieCard_MovieCard__/)){
           console.log("navigated");
           // navigate to /detailpage
            navigate(`/detailpage/${id}`);
