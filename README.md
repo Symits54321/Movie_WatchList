@@ -2,22 +2,42 @@
 
 ![Homepage Screenshot](public/images/homepage.JPG)
 
+
+
 ## Hoisted Link
 
 https://movie-watch-list-khaki.vercel.app/
+
+
 
 ## Description
 
 This is a Movie Watchlist application where you can add,edit,delete movies and view detailed information about each movie.
 
+
+
 ## Features
 
-- Add movies.
-  ![Addpage Screenshot](public/images/addeditpage.JPG)
-- Edit movies.
-- Delete movies .
 - Youtube-video pane on detailpage (by Youtube_React Library)
+
+   ![Addpage Screenshot](public/images/detailpage.JPG)
+
+
+- Add movies.
+
+  ![Addpage Screenshot](public/images/addpage.JPG)
+
+
+- Edit movies.
+
+   ![Addpage Screenshot](public/images/addpage.JPG)
+
+
+- Delete movies .
+
 - View detailed information about each movie.
+
+
 
 ## State Management
 
