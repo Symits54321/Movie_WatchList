@@ -14,13 +14,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap:5px 5px;
     padding:6px;
+    justify-content: space-evenly;
    
     }
 
     
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:540px){
     .movies{
     grid-template-columns: 1fr 1fr ;
     gap:5px 5px;

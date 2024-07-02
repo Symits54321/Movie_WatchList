@@ -15,6 +15,7 @@
     padding: 15px 5px 10px 5px;
     transition: 0.7s;
     cursor:pointer;
+   
 }
 
 .MovieCard:hover{
@@ -44,6 +45,7 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 4/5;
+    position:relative;
 }
 
 .poster>img{
@@ -69,6 +71,24 @@
     background-color: blue;
 }
 
+.deletebtn{
+    padding: 4px 10px;
+    background-color: rgb(255, 66, 66);
+    color: white;
+    border-radius: 0px 0px 0px 5px;
+    box-shadow: none;
+    border:none;
+    opacity: 0.7;
+
+     position: absolute;
+     right: 0px;
+     top:0px;
+
+}
+
+.deletebtn:hover{
+    opacity: 1;
+}
 
 
 

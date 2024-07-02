@@ -33,7 +33,11 @@ function MovieCard({movie,name,imageUrl,id,watched}) {
 
         // first check of btn click event occurrence
 
-        if (targetClassname.match(/movieCard_btns__/) ) {
+        if(e.target.className.match(/movieCard_deletebtn__/)){
+          return;
+        }
+
+       else if (targetClassname.match(/movieCard_btns__/) ) {
             console.log(e.target.className);
             // for watchlist olgorithm alreay given in watchlist component
             // for edit btn
@@ -51,7 +55,8 @@ function MovieCard({movie,name,imageUrl,id,watched}) {
           }
 
          // to open movie  :- (redirecting to detail page)
-         else if(targetClassname.match(/movieCard_poster__/) ||  targetClassname.match(/movieCard_MovieCard__/) || e.target.className.match(/movieCard_MovieCard__/)){
+         else if(targetClassname.match(/movieCard_poster__/) ||  targetClassname.match(/movieCard_MovieCard__/) 
+          || e.target.className.match(/movieCard_MovieCard__/) ){
           console.log("navigated");
           // navigate to /detailpage
            navigate(`/detailpage/${id}`);
@@ -66,10 +71,18 @@ function MovieCard({movie,name,imageUrl,id,watched}) {
 
   return (
     <div className={style.MovieCard} id={id} onClick={(e)=>handlePosterClick(e)}>
+         
+        
 
         {/* //poster */}
            <div className={style.poster} id={id}>
              <img  src={imageUrl} alt={name}/>
+              {/* delete button  */}
+              <button 
+                className={style.deletebtn} 
+                onClick={() => dispatch(movieActions.deleteMovie(id))}>
+                  x
+              </button>
            </div>
          
         {/* //name */}
@@ -79,6 +92,7 @@ function MovieCard({movie,name,imageUrl,id,watched}) {
             <div className={style.btns}>
               <WatchedBtn id={id} watched={watched}/>
               <button  className={style.editbtn}>Edit</button>
+             
             </div>
           
 
