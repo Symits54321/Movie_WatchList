@@ -14,3 +14,9 @@
     background-color: rgb(49, 54, 49);
     
 }
+
+@media screen and (max-width:500px){
+    .watchbtn{
+        width: auto;
+    }
+}

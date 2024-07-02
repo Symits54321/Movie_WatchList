@@ -2,10 +2,13 @@
   text-align: center;
   min-height: 100vh;
   width:100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .headingLogo{
   background-color: #0c0c0c;
+  max-height: 20vh;
 }
 
 

@@ -1,4 +1,6 @@
 .homepage{
     background-color: #141414;
     padding: 10px;
+    flex-grow: 1;
+    background-color: #431018;
 }

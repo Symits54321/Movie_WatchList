@@ -103,4 +103,7 @@
         padding: 0;
         margin:0;
     }
+    .editbtn{
+        width:auto;
+    }
 }
