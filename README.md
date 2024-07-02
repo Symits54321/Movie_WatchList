@@ -13,6 +13,7 @@ This is a Movie Watchlist application where you can add,edit,delete movies and v
 ## Features
 
 - Add movies.
+  ![Addpage Screenshot](public/images/addeditpage.JPG)
 - Edit movies.
 - Delete movies .
 - Youtube-video pane on detailpage (by Youtube_React Library)

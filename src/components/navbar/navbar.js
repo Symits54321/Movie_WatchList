@@ -1,7 +1,8 @@
 
 import { Outlet ,NavLink } from "react-router-dom";
 import style from "./navbar.module.css";
-
+import { useDispatch } from "react-redux";
+import { movieActions } from "../../redux/reducers/movieReducer";
 
 
 
@@ -9,7 +10,7 @@ import style from "./navbar.module.css";
 function Navbar() {
 
 
-
+  let dispatch = useDispatch();
 
   return (
 
@@ -34,6 +35,11 @@ function Navbar() {
           className={({ isActive, isPending }) =>
             isPending ? "pendingLink" : isActive ? `${style.activated} ${style.nav}` : `${style.notActived} ${style.nav}`
           }
+
+          onClick={()=>{
+            dispatch(movieActions.setEditStatus(false))
+            dispatch(movieActions.refreshForm())
+          }}
             >
             Add
         </NavLink>
