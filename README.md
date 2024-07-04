@@ -20,7 +20,7 @@ This is a Movie Watchlist application where you can add,edit,delete movies and v
 
 - Youtube-video pane on detailpage (by Youtube_React Library)
 
-   ![Addpage Screenshot](public/images/detailpage.JPG)
+   ![Detailpage Screenshot](public/images/detailpage.JPG)
 
 
 - Add movies.
@@ -30,7 +30,7 @@ This is a Movie Watchlist application where you can add,edit,delete movies and v
 
 - Edit movies.
 
-   ![Addpage Screenshot](public/images/addpage.JPG)
+   ![Editpage Screenshot](public/images/editpage.JPG)
 
 
 - Delete movies .
