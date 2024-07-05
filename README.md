@@ -30,12 +30,7 @@ This is a Movie Watchlist application where you can add,edit,delete movies and v
 
 - Edit movies.
 
-<<<<<<< HEAD
-   ![Editpage Screenshot](public/images/editpage.JPG)
-=======
-   ![Addpage Screenshot](public/images/editpage.JPG)
->>>>>>> 845ccc9a551896485cdb84b1934addcced9e9eb9
-
+   ![Editpage Screenshot](public/images/editpage.JPG) 
 
 - Delete movies .
 
