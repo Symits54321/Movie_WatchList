@@ -13,15 +13,15 @@ function Movies() {
 
   return (
     <div className={style.movies}>
-
-       {movies.map((movie)=>{
-
-            return(
-                
-                <MovieCard key={movie.id} id={movie.id} movie={movie}name={movie.title} imageUrl={movie.imageUrl} watched={movie.watchedStatus}/>
-                
-            );
-            
+       {movies.slice().reverse().map((movie)=>{
+            return(            
+                <MovieCard 
+                key={movie.id} 
+                id={movie.id} movie={movie}
+                name={movie.title} 
+                imageUrl={movie.imageUrl} 
+                watched={movie.watchedStatus}/>           
+            );          
        })}
 
     </div>
