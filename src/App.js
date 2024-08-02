@@ -1,21 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
-
 import { useEffect,useState } from 'react';
-
 import Homepage from './pages/homepage/homepage';
 import AddEditPage from './pages/add_edit_page/AddEditPage';
 import DetailPage from './pages/detailpage/detailpage';
-
-import data from "./movieData.json";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider, Outlet,NavLink } from "react-router-dom";
-
 import { useDispatch, useSelector } from 'react-redux';
 import { movieReducer,movieActions,movieSelector } from './redux/reducers/movieReducer';
-
 import Navbar from './components/navbar/navbar';
 
 
@@ -23,55 +15,17 @@ import Navbar from './components/navbar/navbar';
 
 function App() {
 
-  const dispatch = useDispatch();
-    
-  // const [Data,setData] = useState([""]);
-
-  // const[]=useSelector(movieSelector);
+         const {movies} = useSelector(movieSelector);
    
-
-
-//---------------------------------Fetching Movies :- in 1st load------------------------------------------------------
-
-
+ //---Fetching Movies :- in 1st load--------------------
   useEffect(()=>{
-
- 
-
-        async function fetchApi(){
-
-            try {
-
-              // let fetchResponse = await fetch("./movieData.json");
-              // let fetchedJson = await fetchResponse;
-                let fetchedJson = data;
-              // setData(fetchedJson);
-              console.log("Got fetched data from movieData.json");
-
-              dispatch(movieActions.setMovies(fetchedJson));
-              console.log(fetchedJson);
-              
-            } catch (error) {
-              
-              console.log(error);
-            }
-      
-          
-        }
+      localStorage.setItem('movies19',JSON.stringify(movies));
+      console.log('Edited movie local storage');
+  },[movies]);
 
 
-        fetchApi();
-
-
-  },[]);
-
-
-
-   
-  // ------------------------------------------- ROUTER   -----------------------------------------------------
-
+  // -------- ROUTER   -------------------------------------
   const browserRouter = createBrowserRouter([{
-
     path:'/',
     element:<Navbar/>,
     children:[
@@ -83,33 +37,15 @@ function App() {
   },]);
 
 
-
-
-
   return (
- 
-      <div className="App">
-        {/* Heading  */}
-        <div className="headingLogo">
-  
+       <div className="App">
+          <div className="headingLogo">
             <img src='images/heading.JPG' />
-  
           </div>
-        {/* it is the main page for all chat execution  */}
-        <RouterProvider  router={browserRouter} />
-      </div>
-    
+          <RouterProvider  router={browserRouter} />
+       </div>   
   );
 }
-
-
-
-
-
-
-
-
-
 
 
 export default App;

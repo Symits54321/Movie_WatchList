@@ -1,5 +1,5 @@
 
-
+import data from "../../movieData.json";
 
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -9,7 +9,7 @@ const initialState={
 
    
 
-     movies : [],
+     movies : JSON.parse(localStorage.getItem('movies19')) || data,
 
 
     //for searchInput
@@ -65,9 +65,7 @@ const movieSlice = createSlice({
 
         fetchStart:(state, action)=>{
             state.isLoading=true;
-        },
-
-     
+        },  
 
         fetchSuccess:(state, action)=>{
             state.message=action.payload;
